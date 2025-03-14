@@ -1,0 +1,46 @@
+
+.cards{
+  width: 80%;
+  gap: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card{
+  position: relative;
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25%;
+  flex-direction: column;
+  width: 221px;
+  height: 145px;
+  background-color: var(--mainColor);
+  i{
+    color: var(--accent-color);
+    font-size: 2.2em;
+  }
+  p{
+    font-size: 1.2rem;
+    transition: .5s;
+    opacity :0;
+  }
+}
+.card::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.card:hover{
+ scale: 1.1;
+  &:before{
+    background: radial-gradient(20px circle at var(--x) var(--y),var(--accent-color),transparent 95%);
+  }
+  p{
+    opacity:1;
+  }
+}

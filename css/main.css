@@ -1,0 +1,28 @@
+@font-face {
+  font-family: tomorrow;
+  src: url(../fonts/Tomorrow-Regular.ttf); 
+}
+:root{
+  --mainColor:#060A11;
+  --secondColor:#161624;
+  --textColor:#A98CFF;
+
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+  font-family:tomorrow, sans-serif;
+  min-height: 100vh;
+  background-color: var(--secondColor);
+}
+main{
+  width: 80%;
+  gap:10vh;
+  padding:  0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

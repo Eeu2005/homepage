@@ -1,0 +1,16 @@
+header{
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly ;
+}
+.data>h1::first-letter{
+  text-transform: uppercase;
+}
+.horario>h1,.data>h1{
+  font-size: 2.5rem;
+}
+.data,.horario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
