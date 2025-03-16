@@ -47,6 +47,6 @@ table {
 	border-spacing: 0;
 }
 a,a:visited{
-  color: currentColor;
+  color: none;
   text-decoration: none;
 }

@@ -3,11 +3,18 @@ const divHorario  = document.querySelector(".horario")
 const divData  = document.querySelector(".data")
 const setTime = async ()=>{
   const [error,clima] = await fetchClima()
+  const isday = (clima) =>{
+    if(clima.current.is_day=1){
+      return "day"
+    }else{
+      return "night"
+    }
+  }
   const climaHTML = `
   <p>${
-    weather_codes[clima.current.weather_code].day.description
+    weather_codes[clima.current.weather_code][isday(clima)].description
   }  <i class="ti ${
-    weather_codes[clima.current.weather_code].day.image
+    weather_codes[clima.current.weather_code][isday(clima)].image
   }" ></i><p>
   <p>Tempearatura ${clima.current.temperature_2m}C°</p>
   `;
@@ -34,16 +41,16 @@ function mensagemDaHora(data){
   const hora= data.getHours() 
   console.log(hora)
   if(hora==23|| hora<8){
-    return "Vai dormir"
+    return "Vai Dormir"
   }
   if(hora>=8&&hora<12){
-    return "bom dia"
+    return "Bom Dia"
   }
   if(hora>=12&&hora<18){
-    return "boa tarde"
+    return "Boa Tarde"
   }
   if(hora>=18&&hora<=22){
-    return "boa noite"
+    return "Boa Noite"
   }
 }
 async function fetchClima(){

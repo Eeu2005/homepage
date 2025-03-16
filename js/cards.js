@@ -3,6 +3,7 @@ const cards = document.querySelector(".cards")
 for (const link of window.links) {
 const card = document.createElement("a")
 card.href=link.href
+card.target = "_blank";
   card.setAttribute("style", `--accent-color:${link.accentColor}`);
  card.classList.add("card")
  card.innerHTML = `<i class="ti ${link.icon}"></i>

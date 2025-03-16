@@ -8,6 +8,7 @@
   flex-wrap: wrap;
 }
 .card{
+  color: var(--accent-color);
   position: relative;
   transition: .5s;
   display: flex;
@@ -36,6 +37,7 @@
   z-index: 0;
 }
 .card:hover{
+  height: 155px;
  scale: 1.1;
   &:before{
     background: radial-gradient(20px circle at var(--x) var(--y),var(--accent-color),transparent 95%);
@@ -43,4 +45,10 @@
   p{
     opacity:1;
   }
+}
+.card:focus{
+  scale: 1.1;
+  border: 1px solid var(--accent-color);
+  outline: none ;
+  p{opacity: 1;}
 }

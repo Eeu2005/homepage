@@ -10,7 +10,12 @@ header{
   font-size: 2.5rem;
 }
 .data,.horario{
+  text-align: center;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.data i{
+  font-size: 1.2em;
 }

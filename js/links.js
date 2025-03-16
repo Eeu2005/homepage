@@ -1,3 +1,13 @@
+/**
+ * @typedef {Object} link
+ * @property {string} icon
+ * @property {string} nome
+ * @property {string} href
+ * @property {string} accentColor
+ */
+/**
+ * @type link[]
+ */
 const links = [
   {
     icon: "ti-brand-github",
@@ -6,28 +16,10 @@ const links = [
     accentColor: "white",
   },
   {
-    icon: "ti-brand-trello",
-    nome: "Trello",
-    href: "https://trello.com",
-    accentColor: "#1274b5",
-  },
-  {
-    icon: "ti-server",
-    nome: "Localhost",
-    href: "http://localhost",
-    accentColor: "#cd6018",
-  },
-  {
-    icon: "ti-brand-figma",
-    nome: "Figma",
-    href: "https://www.figma.com",
-    accentColor: "#0acf83",
-  },
-  {
     icon: "ti-brand-youtube",
     nome: "YouTube",
     href: "https://www.youtube.com",
-    accentColor: "#FF0000",
+    accentColor: "#FF3333",
   },
   {
     icon: "ti-mail",
@@ -42,10 +34,46 @@ const links = [
     accentColor: "#FF4500",
   },
   {
-    icon:"ti-crop-landscape",
-    nome:"blank",
-    href:"about:blank",
-    accentColor:"white"
-  }
+    icon: "ti-news",
+    nome: "Tab News",
+    href: "https://www.tabnews.com.br/",
+    accentColor: "white",
+  },
+  {
+    icon: "ti-brand-trello",
+    nome: "Trello",
+    href: "https://trello.com",
+    accentColor: "#1274b5",
+  },
+  {
+    icon: "ti-brand-figma",
+    nome: "Figma",
+    href: "https://www.figma.com",
+    accentColor: "#0acf83",
+  },
+  {
+    icon: "ti-code",
+    nome: "devdocs",
+    href: "https://devdocs.io/",
+    accentColor: "#A36F",
+  },
+  {
+    icon: "ti-regex",
+    nome: "RegExp",
+    href: "http://regexr.com/",
+    accentColor: "#70b0e0",
+  },
+  {
+    icon: "ti-server",
+    nome: "Localhost",
+    href: "http://localhost",
+    accentColor: "#cd6018",
+  },
+  {
+    icon: "ti-crop-landscape",
+    nome: "blank",
+    href: "about:blank",
+    accentColor: "white",
+  },
 ];
 window.links = links;
