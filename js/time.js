@@ -4,7 +4,7 @@ const divData  = document.querySelector(".data")
 const setTime = async ()=>{
   const [error,clima] = await fetchClima()
   const isday = (clima) =>{
-    if(clima.current.is_day=1){
+    if(clima.current.is_day==1){
       return "day"
     }else{
       return "night"
