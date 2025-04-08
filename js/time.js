@@ -3,6 +3,20 @@ const divHorario  = document.querySelector(".horario")
 const divData  = document.querySelector(".data")
 const setTime = async ()=>{
   const [error,clima] = await fetchClima()
+  const data = dayjs();
+  if(error){
+      divHorario.innerHTML = `
+  <h1>${data.format("HH:mm")}</h1>
+  <p>${mensagemDaHora(new Date())}</p>`;
+      divData.innerHTML = `
+  <h1>${data.format("MMMM")} ${data.format("DD")}</h1>
+  <div>
+  Erro ao pegar o clima
+  </div>
+  `;
+     return
+  }
+
   const isday = (clima) =>{
     if(clima.current.is_day==1){
       return "day"
@@ -18,15 +32,14 @@ const setTime = async ()=>{
   }" ></i><p>
   <p>Tempearatura ${clima.current.temperature_2m}C°</p>
   `;
-
-  const data = dayjs()
+  
   divHorario.innerHTML = `
   <h1>${data.format("HH:mm")}</h1>
   <p>${mensagemDaHora(new Date())}</p>`;
   divData.innerHTML = `
   <h1>${data.format("MMMM")} ${data.format("DD")}</h1>
   <div>
-  ${error ? "Error ao pegar o clima" : climaHTML}
+  ${climaHTML}
   </div>
   `;
 }

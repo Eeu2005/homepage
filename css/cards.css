@@ -39,6 +39,7 @@
 .card:hover{
   height: 155px;
  scale: 1.1;
+ margin: 15px;
   &:before{
     background: radial-gradient(20px circle at var(--x) var(--y),var(--accent-color),transparent 95%);
   }

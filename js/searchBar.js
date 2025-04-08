@@ -2,7 +2,6 @@ const seachInput = document.getElementById("search");
 let altPressed = false
 addEventListener("keydown",(e)=>{
   if(e.key == "Alt"){
-    e.preventDefault()
     altPressed=!altPressed
     if(altPressed){
       seachInput.classList.add("bypass");

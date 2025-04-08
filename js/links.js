@@ -13,6 +13,7 @@ const links = [
     icon: "ti-brand-github",
     nome: "Github",
     href: "https://github.com/",
+    alt: "https://github.com/eeu2005",
     accentColor: "white",
   },
   {
@@ -26,6 +27,12 @@ const links = [
     nome: "Gmail",
     href: "https://mail.google.com",
     accentColor: "#D14836",
+  },
+  {
+    icon:"ti-brand-linkedin",
+    nome:"LinkedIn",
+    href:"https://www.linkedin.com",
+    accentColor:"#0077b5",
   },
   {
     icon: "ti-brand-reddit",
@@ -62,6 +69,12 @@ const links = [
     nome: "RegExp",
     href: "http://regexr.com/",
     accentColor: "#70b0e0",
+  },
+  {
+    icon:"ti-brand-mysql",
+    nome:"mySQL",
+    href:"http://localhost/phpmyadmin",
+    accentColor:"#00758f",
   },
   {
     icon: "ti-server",
