@@ -32,7 +32,6 @@ const links = [
     icon: "ti-brand-linkedin",
     nome: "LinkedIn",
     href: "https://www.linkedin.com",
-    alt: "www.linkedin.com/in/emanueldossantosmelo",
     accentColor: "#0077b5",
   },
   {
