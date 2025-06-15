@@ -29,10 +29,11 @@ const links = [
     accentColor: "#D14836",
   },
   {
-    icon:"ti-brand-linkedin",
-    nome:"LinkedIn",
-    href:"https://www.linkedin.com",
-    accentColor:"#0077b5",
+    icon: "ti-brand-linkedin",
+    nome: "LinkedIn",
+    href: "https://www.linkedin.com",
+    alt: "www.linkedin.com/in/emanueldossantosmelo",
+    accentColor: "#0077b5",
   },
   {
     icon: "ti-brand-reddit",
@@ -71,10 +72,10 @@ const links = [
     accentColor: "#70b0e0",
   },
   {
-    icon:"ti-brand-mysql",
-    nome:"mySQL",
-    href:"http://localhost/phpmyadmin",
-    accentColor:"#00758f",
+    icon: "ti-brand-mysql",
+    nome: "mySQL",
+    href: "http://localhost/phpmyadmin",
+    accentColor: "#00758f",
   },
   {
     icon: "ti-server",
