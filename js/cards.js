@@ -1,6 +1,6 @@
 
 const cards = document.querySelector(".cards")
-let altPressed = false
+let altClicked = false
 for (const link of window.links) {
 const card = document.createElement("a")
 card.href=link.href
@@ -17,9 +17,12 @@ card.innerHTML = `<i class="ti ${link.icon}"></i>
         card.style.setProperty("--y",e.layerY+"px")
       })
 
-document.addEventListener("click",e=>{
-  altPressed= !altPressed
-    if(altPressed){
+addEventListener("keyup",e=>{
+  if(e.key=="Alt"){
+      altClicked = !altClicked;
+  }
+
+    if(altClicked){
     document.querySelectorAll(".card").forEach((card) => {
       card.href = card.dataset.alt
     });

@@ -1,6 +1,6 @@
 const seachInput = document.getElementById("search");
 let altPressed = false
-addEventListener("keydown",(e)=>{
+addEventListener("keyup",(e)=>{
   if(e.key == "Alt"){
     altPressed=!altPressed
     if(altPressed){
