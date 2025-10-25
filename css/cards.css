@@ -1,16 +1,18 @@
-
-.cards{
+.cards {
   width: 80%;
-  gap: 5px;
+  gap: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
-.card{
+.card {
+  box-shadow: -1px 1px 2px 0px
+    color-mix(in srgb, var(--accent-color) 55%, transparent 90%);
+  border-radius: 5px;
   color: var(--accent-color);
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,34 +20,71 @@
   flex-direction: column;
   width: 221px;
   height: 145px;
-  background-color: var(--mainColor);
-  i{
+  i {
     color: var(--accent-color);
     font-size: 2.2em;
   }
-  p{
+  p {
     font-size: 1.2rem;
-    transition: .5s;
-    opacity :0;
+    transition: 0.5s;
+    opacity: 0;
   }
 }
-.card::before{
+.alt:hover > i {
+  color: var(--mainColor);
+}
+.alt {
+  position: relative;
+}
+.alt:hover::before {
+  animation: fill 0.1s linear;
+  color: var(--mainColor) !important;
+  background: var(--accent-color) !important;
+  z-index: -1 !important;
+}
+.alt:hover > p {
+  /* color: var(--mainColor); */
+  opacity: 1;
+}
+@keyframes fill {
+  from {
+    width: 0;
+    height: 0px;
+  }
+  to {
+    width: 221px;
+    height: 145px;
+  }
+}
+.card::before {
+  border-radius: 5px;
+  background-color: var(--mainColor);
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
-.card:hover,.card:focus{
+.card:hover,
+.card:focus {
   outline: 0 !important;
   height: 155px;
- scale: 1.1;
- border: 1px solid var(--accent-color);
- margin: 15px;
-  p{
-    opacity:1;
+  scale: 1.1;
+  margin: 15px;
+  p {
+    opacity: 1;
   }
 }
-.card:hover:before{
-    background: radial-gradient(20px circle at var(--x) var(--y),var(--accent-color),transparent 95%);
-  }
+.alt:hover {
+  color: rgb(
+    from var(--accent-color) calc(r - 150) calc(g - 150) calc(b - 150)
+  );
+}
+.card:hover:before {
+  /* transition: 5s cubic-bezier(0.755, 0.05, 0.855, 0.06); */
+  background: radial-gradient(
+    10px circle at var(--x) var(--y),
+    var(--accent-color),
+    var(--mainColor) 95%
+  );
+}

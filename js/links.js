@@ -30,7 +30,7 @@ const links = [
   },
   {
     icon: "ti-brand-linkedin",
-    nome: "LinkedIn",
+    nome: "Linkedin",
     href: "https://www.linkedin.com",
     accentColor: "#0077b5",
   },

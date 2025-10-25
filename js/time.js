@@ -19,7 +19,7 @@ const setTime = async () => {
     return;
   }
 
-  const isday = (clima) => {
+  const isDay = (clima) => {
     if (clima.current.is_day == 1) {
       return "day";
     } else {
@@ -28,11 +28,11 @@ const setTime = async () => {
   };
   const climaHTML = `
   <p>${
-    weather_codes[clima.current.weather_code][isday(clima)].description
+    weather_codes[clima.current.weather_code][isDay(clima)].description
   }  <i class="ti ${
-    weather_codes[clima.current.weather_code][isday(clima)].image
+    weather_codes[clima.current.weather_code][isDay(clima)].image
   }" ></i><p>
-  <p>Tempearatura ${clima.current.temperature_2m}C°</p>
+  <p>Temperatura ${clima.current.temperature_2m}C°</p>
   `;
 
   divHorario.innerHTML = `

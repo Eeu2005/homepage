@@ -17,22 +17,23 @@ card.innerHTML = `<i class="ti ${link.icon}"></i>
         card.style.setProperty("--y",e.layerY+"px")
       })
 
-addEventListener("keyup",e=>{
-  if(e.key=="Alt"){
-      altClicked = !altClicked;
-  }
-
-    if(altClicked){
-    document.querySelectorAll(".card").forEach((card) => {
-      card.href = card.dataset.alt
-    });
-  }else{
-    document.querySelectorAll(".card").forEach((card) => {
-      card.href = card.dataset.originalHref;
-    });
-  }
-
-  
-})
 cards.appendChild(card)
 }
+document.body.addEventListener("keyup", (e) => {
+  console.log(e.key);
+  if (e.key == "Alt") {
+    altClicked = !altClicked;
+  }
+
+  if (altClicked) {
+    document.querySelectorAll(".card").forEach((card) => {
+      card.href = card.dataset.alt;
+      card.classList.add("alt");
+    });
+  } else {
+    document.querySelectorAll(".card").forEach((card) => {
+      card.href = card.dataset.originalHref;
+      card.classList.remove("alt");
+    });
+  }
+});
