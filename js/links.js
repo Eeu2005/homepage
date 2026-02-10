@@ -29,6 +29,12 @@ const links = [
     accentColor: "#D14836",
   },
   {
+    icon: "ti-brand-whatsapp",
+    nome: "WhatsApp",
+    href: "https://web.whatsapp.com/",
+    accentColor: "#25D366",
+  },
+  {
     icon: "ti-brand-linkedin",
     nome: "Linkedin",
     href: "https://www.linkedin.com",
@@ -95,4 +101,10 @@ const links = [
     accentColor: "white",
   },
 ];
+let database=[]
+if (localStorage.getItem("links")) {
+  database = JSON.parse(localStorage.getItem("links"))
+  links.push(...database)
+}
+  
 window.links = links;

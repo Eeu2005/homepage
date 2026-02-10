@@ -12,10 +12,38 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/modal.css">
   <script src="js/weather_codes.js"></script>
   <script src="js/links.js"></script>
 </head>
 <body>
+  <div class="overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Novo Atalho</span>
+        <button class="close-modal-btn" onclick="fecharModal()"><i class="ti ti-x"></i></button>
+      </div>
+      <div class="modal-content">
+        <label for="">
+          <p>Nome Link</p>
+          <input type="text" id="link-nome">
+        </label>
+        <label for="">
+          <p>Endereço do link</p>
+          <input type="text" id="link-url">
+        </label>
+        <label for="">
+          <p>Icone do link <a href="https://tabler.io/icons">tabler-icons</a> </p>
+          <input type="text" id="link-icon">
+        </label>
+        <label for="">
+          <p>cor do do atalho </p>
+          <input type="color" id="cor-icone" value="#000000">
+        </label>
+        <button class="save-modal-btn" onclick="salvarAtalho()">Salvar</button>
+      </div>
+    </div>
+  </div>
   <main>
     <header>
     <div class="horario"></div>
@@ -27,5 +55,6 @@
   </main>
 <script src="js/cards.js"></script>
   <script src="js/time.js"></script>
+  <script src="js/Modal.js"></script>
 </body>
 </html>
